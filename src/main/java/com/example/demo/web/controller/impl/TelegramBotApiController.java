@@ -10,17 +10,6 @@ import org.telegram.telegrambots.meta.generics.BotSession;
 public class TelegramBotApiController {
     private ConfigurableApplicationContext context;
 
-    //output test telegram bot service
-    /*
-    public void testInfo() {
-        AudioTelegramBotServiceImpl telegramBotServiceImpl = new AudioTelegramBotServiceImpl();
-        showInfo(telegramBotServiceImpl);
-    }
-    public void getInfo(TelegramBotService service) {
-        service.showInfo();
-    }
-    */
-
     public TelegramBotApiController() {
     }
 
