@@ -1,7 +1,6 @@
 package com.example.demo.web.controller.impl;
 
 import com.example.demo.core.UserService;
-import com.example.demo.core.user.impl.UserServiceImpl;
 import com.example.demo.web.controller.UserController;
 import com.example.demo.web.dto.UserDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,10 +10,10 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(name = "/")
 public class UserControllerImpl implements UserController {
-    private UserService userService;
+    private final UserService userService;
 
     @Autowired
-    public UserControllerImpl(UserServiceImpl userService) {
+    public UserControllerImpl(UserService userService) {
         this.userService = userService;
     }
 
