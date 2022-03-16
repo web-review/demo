@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(name = "/")
 public class UserControllerImpl implements UserController {
@@ -40,11 +42,11 @@ public class UserControllerImpl implements UserController {
         return userService.updateRole(userDto);
     }
 
-    @Override
+   /* @Override
     @GetMapping(value = "/get/user/username")
     public UserDto getUserByUsername(@RequestBody UserDto userDto) {
         return userService.getUserByUsername(userDto);
-    }
+    }*/
 
     @Override
     @GetMapping(value = "/get/user/role")
@@ -57,4 +59,8 @@ public class UserControllerImpl implements UserController {
     public UserDto removeUserById(@RequestBody UserDto userDto) {
         return userService.removeUserById(userDto);
     }
+
+    @Override
+    @GetMapping(value = "/get/users")
+    public List<UserDto> getAllUsers() { return userService.getAllUsers(); }
 }
